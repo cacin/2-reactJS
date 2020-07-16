@@ -1,0 +1,22 @@
+.user-main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+input,button{
+    border: none;
+    padding: 8px;
+}
+button{
+    background-color: #0066ff;
+    color: #ffffff;
+    margin: 5px;
+}
+button:hover{
+    background-color: #003399;
+}
+form{
+    flex-basis: 100%;
+}
+
