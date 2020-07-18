@@ -20,17 +20,20 @@ class Users extends Component{
             id: Date.now(),
             name: this._inputName.value
         }
-
-        this.setState((state) => {
-            return({
-                users: state.users.concat(userAdd)
-
-            });
-        });
-
-        this._inputName.value='';
+        if(this._inputName.value!==''){
         
+            
+            this.setState((state) => {
+                return({
+                    users: state.users.concat(userAdd)
+                });
+            
+            });
+        }
+        this._inputName.value='';
+           
     }
+    
 
     removeUser = (user) => {
         
@@ -50,7 +53,7 @@ class Users extends Component{
                     <input ref={(element)=>{this._inputName = element}} type="text" placeholder="Enter name"/>
                     <button type="submit">Add user</button>
                 </form>
-
+                
                <UsersList usersName={this.state.users} removeUserMethod={this.removeUser}/>
             </div>
         );
